@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-  get 'user/new'
+	root 'welcome#index'
+	get 'user/new'
 #   Prefix Verb   URI Pattern               Controller#Action
 #    signup GET    /signup(.:format)         users#new
 #     users GET    /users(.:format)          users#index
