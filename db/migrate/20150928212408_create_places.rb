@@ -3,7 +3,7 @@ class CreatePlaces < ActiveRecord::Migration
     create_table :places do |t|
       t.string :name
       t.float :latitude
-      t.float :longtitude
+      t.float :longitude
       t.string :picture
 
       t.timestamps null: false
