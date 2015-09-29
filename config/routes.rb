@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+
+  	get "/sign_in", to: "sessions#new"
+  	post "/sessions", to: "sessions#create"
+
 	root 'welcome#index'
 	get 'user/new'
+<<<<<<< HEAD
 #   Prefix Verb   URI Pattern               Controller#Action
 #    signup GET    /signup(.:format)         users#new
 #     users GET    /users(.:format)          users#index
@@ -14,5 +19,11 @@ Rails.application.routes.draw do
   get '/users/new', to: 'users#new' 
   post '/users', to: 'users#create'
   get 'users/:id', to: 'users#show'
+=======
+
+  	get '/users/new', to: 'users#new' 
+  	post '/users', to: 'users#create'
+  	get 'users/:id', to: 'users#show'
+>>>>>>> 7d6f8fa50906646fc9b53000598ea511c4de2bee
 
 end
