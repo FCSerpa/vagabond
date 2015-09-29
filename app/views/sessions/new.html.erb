@@ -1,6 +1,7 @@
+<body id="sessions">
 Sign in
 
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+<%= form_for @user, url: "/sessions/new", method: "post" do |f| %>
 	<div>
 		<%= f.text_field :email, placeholder: "Email" %>
 	</div>
@@ -9,3 +10,4 @@ Sign in
 	</div>
 	<%= f.submit "Sign In" %>
 <% end %>
+</body>

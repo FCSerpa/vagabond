@@ -1,0 +1,12 @@
+<body id="places">
+<h1><%= @place.name %></h1>
+<span>
+	Latitude: <%= @place.latitude %>
+	Longitude: <%= @place.longitude %>
+</span>
+<% @tip.each do |f| %>
+	<ul>
+		<li><a href="#">Name: <%= f.name %></a></li>
+	</ul>
+<% end %>
+</body>

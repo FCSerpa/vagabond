@@ -1,8 +1,18 @@
+<body id="users">
 <div class="column">
- <img src="http://www.mallorcacyclingtours.com/wp-content/uploads/2014/04/blank-profile-hi.png">
- <ul class="list">
-	<li class="info">Name: <%= @user.first_name %> <%= @user.last_name %></li>
-	<li class="info">Date Joined: <%= @user.created_at %></li>
-	<li class="info">Current City: </li>
- </ul>
+	<img src="http://www.mallorcacyclingtours.com/wp-content/uploads/2014/04/blank-profile-hi.png">
+	<ul class="list">
+		<li class="info">Name: <%= @user.first_name %> <%= @user.last_name %></li>
+		<li class="info">Date Joined: <%= @user.created_at %></li>
+		<li class="info">Current City: </li>
+ 	</ul>
+ 	<a href = "/users/<%= @user.id %>/edit"><b>EDIT USER!</b></a>
 </div>
+<% @tip.each do |f| %>
+	<ul>
+		<li><a href="/tips/<%= @user.id %>">Name: <%= f.name %></a></li>
+	</ul>
+<% end %>
+</body>
+
+ 
