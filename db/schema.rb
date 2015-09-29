@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150928212509) do
   create_table "places", force: :cascade do |t|
     t.string   "name"
     t.float    "latitude"
-    t.float    "longtitude"
+    t.float    "longitude"
     t.string   "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
