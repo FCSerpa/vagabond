@@ -12,32 +12,8 @@
 </head>
 <body>
 	<div class="container">
-		<nav class="navbar navbar-default" id="navbar">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<h3>Vagabond</h3>
-				</div>
-
-				<nav class="navbar navbar-right">
-					
-				
-					<% if @current_user %>
-						<%= link_to "Profile", 'users/:id', class: "nav btn btn-default navbar-btn userbtn" %>
-						<%= link_to "Log Out", '/log_out', class: "nav btn btn-default navbar-btn userbtn" %>
-					<% else %>
-						<%= link_to "Sign Up", "users/new", class: "nav btn btn-default navbar-btn userbtn" %>
-						<%= link_to "Sign In", '/sign_in', class: "nav btn btn-default navbar-btn userbtn" %>
-					<% end %>
-
-
-					<%= form_tag("/search", method: "get", class: "navbar-form navbar-right" ) do %>
-  					<%= label_tag(:q, "") %>
-  					<%= text_field_tag(:q, "Search Places", class: "form-control") %>
-  					<%= submit_tag("Search", class: "btn btn-default navbar-btn") %>
-					<% end %>
-				</nav>		
-			</div>
-		</nav>
+		
+		<%= render "/layouts/navbar" %>
 
 		<%= yield %>
 

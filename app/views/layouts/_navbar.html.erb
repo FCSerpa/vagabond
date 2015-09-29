@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-default container navbar-fixed-top" id="navbar">
+	
+		<div class="navbar-header">
+			<%= link_to "Vagabond", '/', class: "navbar-brand userbtn" %>
+		</div>
+
+		<nav class="navbar navbar-right">
+			
+		
+			<% if @current_user %>
+				<%= link_to "Profile", 'users/:id', class: "nav btn btn-default navbar-btn userbtn" %>
+				<%= link_to "Log Out", '/log_out', class: "nav btn btn-default navbar-btn userbtn" %>
+			<% else %>
+				<%= link_to "Sign Up", "users/new", class: "nav btn btn-default navbar-btn userbtn" %>
+				<%= link_to "Sign In", '/sign_in', class: "nav btn btn-default navbar-btn userbtn" %>
+			<% end %>
+
+
+			<%= form_tag("/search", method: "get", class: "navbar-form navbar-right" ) do %>
+				<%= label_tag(:q, "") %>
+				<%= text_field_tag(:q, "Search Places", class: "form-control") %>
+				<%= submit_tag("Search", class: "btn btn-default navbar-btn") %>
+			<% end %>
+		</nav>		
+	
+</nav>
