@@ -13,7 +13,6 @@ class UsersController < ApplicationController
 		@user = User.find_by({id: params[:id]})
 		@tip = Tip.where(users_id: params[:id])
 		@tip.each do |f|
-			puts f.name
 		end
 	end
 
