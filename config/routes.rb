@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'tips/new'
+
+  get 'tips/show'
+
   	get "/sign_in", to: "sessions#new"
   	post "/sessions", to: "sessions#create"
 
@@ -12,5 +16,7 @@ Rails.application.routes.draw do
   	get 'users/:id/edit', to: 'users#edit'
   	patch 'users/:id', to: 'users#update'
 
+
+  	get '/tips/:id', to: 'tips#show'
 
 end
