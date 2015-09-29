@@ -8,6 +8,7 @@ class TipsController < ApplicationController
 	end
 
 	def create
+		@tip = Tip.create(tip_params)
 	end
 
 	def show
