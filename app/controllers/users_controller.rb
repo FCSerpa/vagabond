@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
 	def edit
 		@user = User.find_by({id: params[:id]})
+		@places = Place.all
 	end
 
 	def update
