@@ -5,8 +5,8 @@ class TipsController < ApplicationController
   
     def show
         @tip = Tip.find(params[:id])
-        @users_id = params[:id]
-
+        @author_firstname = User.find(params[:id]).first_name
+        @author_lastname = User.find(params[:id]).last_name
     end
 
 
