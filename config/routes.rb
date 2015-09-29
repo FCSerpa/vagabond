@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'tips/show'
 
   	get "/sign_in", to: "sessions#new"
-  	post "/sessions", to: "sessions#create"
+  	post "/sessions/new", to: "sessions#create"
 
 	root 'welcome#index'
 	get 'user/new'
