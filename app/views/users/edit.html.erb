@@ -1,0 +1,12 @@
+<h1>DANIEL WAS HERE</h1>
+<div><%= @user %> </div>
+
+<%= form_for @user do |f| %>
+  <span>
+    <%= f.text_field :first_name, placeholder: "First Name" %> 
+  </span>
+  <span>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+  </span>
+  <%= f.submit %>
+<% end %>
