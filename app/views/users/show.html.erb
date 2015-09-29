@@ -4,7 +4,7 @@
 	<ul class="list">
 		<li class="info">Name: <%= @user.first_name %> <%= @user.last_name %></li>
 		<li class="info">Date Joined: <%= @user.created_at %></li>
-		<li class="info">Current City: </li>
+		<li class="info">Current City: <%= @user.place.name %></li>
  	</ul>
  	<a href = "/users/<%= @user.id %>/edit"><b>EDIT USER!</b></a>
 </div>

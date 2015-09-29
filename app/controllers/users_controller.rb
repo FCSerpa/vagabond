@@ -12,7 +12,6 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find_by({id: params[:id]})
 		@tip = Tip.where(user_id: params[:id])
-		
 	end
 
 	def edit
