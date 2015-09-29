@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Tip.create(name:"san-francisco",users_id:1, description:"nice view of golden gate from north side of the bridge")
