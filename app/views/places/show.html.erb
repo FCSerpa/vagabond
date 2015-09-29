@@ -4,9 +4,11 @@
 	Latitude: <%= @place.latitude %>
 	Longitude: <%= @place.longitude %>
 </span>
+
+
 <% @tip.each do |f| %>
 	<ul>
-		<li><a href="/tips/<%= @user.id %>">Name: <%= f.name %></a></li>
+		<li><a href="#">Name: <%= f.name %></a></li>
 	</ul>
 <% end %>
 </body>

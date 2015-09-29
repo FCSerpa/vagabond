@@ -1,0 +1,12 @@
+<%= form_for @user do |f| %>
+  <span>
+    <%= f.text_field :first_name, placeholder: "First Name" %> 
+  </span>
+  <span>
+    <%= f.text_field :name, placeholder: "Title" %>
+  </span>
+  <span>
+    <%= f.text_field :description, placeholder: "Enter your comments" %>
+  </span>
+  <%= f.submit %>
+<% end %>
