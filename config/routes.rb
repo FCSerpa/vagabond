@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   get 'users/:id/edit', to: 'users#edit'
   patch 'users/:id', to: 'users#update'
 
-  get '/places/:id', to: 'placesw#show'
+  get '/places/:id', to: 'places#show'
 
 end
