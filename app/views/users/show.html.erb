@@ -6,3 +6,8 @@
 	<li class="info">Current City: </li>
  </ul>
 </div>
+<% @tips.each do |tip| %>
+ <ul class="list">
+	<li class="info">Name: <%= @tip.name %></li>
+ </ul>
+ <% end %>
