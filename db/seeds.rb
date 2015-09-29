@@ -14,3 +14,5 @@ end
   Tip.create(name: FFaker::Name::name, description: FFaker::HipsterIpsum::paragraph, user_id: rand(1..95), place_id: sf.id)
 end
 
+
+
