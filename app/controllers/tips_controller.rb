@@ -41,19 +41,24 @@ class TipsController < ApplicationController
 
 	end
 
+
   	def show
-
-    @tip = Tip.find(params[:id])
-    @author_firstname = @tip.user.first_name
-    @author_lastname = @tip.user.last_name
-
+    	@tip = Tip.find(params[:id])
+    	@author_firstname = @tip.user.first_name
+    	@author_lastname = @tip.user.last_name
   	end
 
   	private
 
   	def tip_params
-    params.require(:tip).permit(:name, :description, :user_id)
+    	params.require(:tip).permit(:name, :description, :user_id)
   	end
 
+	def destroy
+		# @tip = Tip.find(params[:id])
+		Tip.destroy(params[:id])
+		redirect_to '/tips'
+	end
+>>>>>>> feature_delete_tip
 end
 
