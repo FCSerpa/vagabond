@@ -41,13 +41,6 @@ class TipsController < ApplicationController
 
 	end
 
-
-  	def show
-    	@tip = Tip.find(params[:id])
-    	@author_firstname = @tip.user.first_name
-    	@author_lastname = @tip.user.last_name
-  	end
-
 	def destroy
 		# @tip = Tip.find(params[:id])
 		Tip.destroy(params[:id])
