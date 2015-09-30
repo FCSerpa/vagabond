@@ -2,10 +2,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get 'tips/new'
-  get 'tips/show'
-  get '/tips/:id', to: 'tips#show'
-
   get "/sign_in", to: "sessions#new"
   post "/sessions/new", to: "sessions#create"
 
@@ -17,5 +13,9 @@ Rails.application.routes.draw do
   patch 'users/:id', to: 'users#update'
 
   get '/places/:id', to: 'places#show'
+
+  get '/tips/new', to: 'tips#new'
+  post '/tips', to: 'tips#create'
+  get '/tips/:id', to: 'tips#show'
 
 end

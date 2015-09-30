@@ -1,4 +1,11 @@
 <body id="tips">
-<h1>Tips#new</h1>
-<p>Find me in app/views/tips/new.html.erb</p>
+<h1>New tip</h1>
+<%= form_for(@tip) do |f| %>
+  <span>
+    <%= f.text_field :name, placeholder: "Tip Name" %> 
+  </span>
+  <span>
+    <%= f.text_field :description, placeholder: "Description" %>
+  </span>
+<% end %>
 </body>

@@ -4,8 +4,7 @@
 	Latitude: <%= @place.latitude %>
 	Longitude: <%= @place.longitude %>
 </span>
-
-
+<button  type="button" class="btn btn-default btn-lg"><a href="/tips/new">Share a tip!</a></button>
 <% @tip.each do |f| %>
 	<ul>
 		<li><a href="#">Name: <%= f.name %></a></li>
