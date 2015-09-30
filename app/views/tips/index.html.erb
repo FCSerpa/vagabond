@@ -1,0 +1,6 @@
+<h1>ALL THE TIPS!</h1>
+
+<% @tips.each do |tip| %>
+	<a href="/tips/<%= tip.id %>"><%= tip.name %></a>
+	<br>
+<% end %>

@@ -2,10 +2,11 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get '/tips/', to: 'tips#index'
   get 'tips/new'
   get 'tips/show'
   get '/tips/:id', to: 'tips#show'
-  delete 'tips/:id', to: 'tips#destroy'
+  delete '/tips/:id', to: 'tips#destroy'
 
   get "/sign_in", to: "sessions#new"
   post "/sessions/new", to: "sessions#create"
