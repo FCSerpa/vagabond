@@ -17,7 +17,6 @@ class TipsController < ApplicationController
 	    	end
   	end
 
-
 	def show
 	    @tip = Tip.find(params[:id])
 	    @author_firstname = @tip.user.first_name
