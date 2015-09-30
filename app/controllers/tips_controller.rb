@@ -14,8 +14,8 @@ class TipsController < ApplicationController
 
 	def show
 	    @tip = Tip.find(params[:id])
-	    @author_firstname = User.find(params[:id]).first_name
-	    @author_lastname = User.find(params[:id]).last_name
+	    @author_firstname = User.find(params[:user_id]).first_name
+	    @author_lastname = User.find(params[:user_id]).last_name
 	end
 
 	private
