@@ -12,4 +12,9 @@ class TipsController < ApplicationController
 	    @author_firstname = User.find(params[:id]).first_name
 	    @author_lastname = User.find(params[:id]).last_name
 	end
+
+	def destroy
+		# @tip = Tip.find(params[:id])
+		Tip.destroy(params[:id])
+	end
 end
