@@ -1,7 +1,6 @@
 <body id="sessions">
 	<div class="container">
 		Sign in
-
 		<%= form_for @user, url: "/sessions/new", method: "post" do |f| %>
 			<div>
 				<%= f.text_field :email, placeholder: "Email" %>
