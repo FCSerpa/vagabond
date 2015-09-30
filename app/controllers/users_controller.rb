@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
 	def new
 		@user = User.new
 	end
@@ -8,10 +7,9 @@ class UsersController < ApplicationController
 		newPlaceId = newPlace.id
     	newHash = user_params
     	newHash[:place_id] = newPlaceId
-    	binding.pry
     	@user = User.create(newHash) 		
     	login(@user)
-    	redirect_to user_path(@user)
+    	redirect_to "/users/#{@user.id}"
 	end
 
 	def show
