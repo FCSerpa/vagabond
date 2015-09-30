@@ -9,6 +9,7 @@ class TipsController < ApplicationController
 
 	def create
 		@tip = Tip.create(tip_params)
+		redirect_to "/tips/#{@tip.id}"
 	end
 
 	def show
@@ -17,4 +18,8 @@ class TipsController < ApplicationController
 	    @author_lastname = User.find(params[:id]).last_name
 	end
 
+	private
+	def tip_params
+		params.require(:tip).permit(:name, :description)
+	end
 end
