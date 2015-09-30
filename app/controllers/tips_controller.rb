@@ -54,6 +54,5 @@ class TipsController < ApplicationController
   	def tip_params
     params.require(:tip).permit(:name, :description, :user_id)
   	end
-
 end
 

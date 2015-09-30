@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
-  get "/sign_in", to: "sessions#new"
-  post "/sessions/new", to: "sessions#create"
-  delete "/sessions", to: "sessions#destroy"
+  get '/sign_in', to: 'sessions#new'
+  post '/sessions/new', to: 'sessions#create'
+  delete '/sessions', to: 'sessions#destroy'
 
   get 'user/new'
   get '/users/new', to: 'users#new' 
@@ -13,12 +13,12 @@ Rails.application.routes.draw do
   get 'users/:id/edit', to: 'users#edit'
   patch 'users/:id', to: 'users#update'
 
-  get '/places/:id', to: 'places#show'
-
   get '/tips/new', to: 'tips#new'
   post '/tips', to: 'tips#create'
   get '/tips/:id', to: 'tips#show', as: 'tip'
   get 'tips/:id/edit', to: 'tips#edit'
   patch '/tips/:id', to: 'tips#update'
+
+  get '/places', to: 'places#index'
 
 end
