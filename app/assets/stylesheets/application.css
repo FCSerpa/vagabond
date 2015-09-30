@@ -14,3 +14,15 @@
  *= require_tree .
  *= require_self
  */
+
+body { padding-top: 70px; }
+
+#navbar {
+	font-size: 30px;
+
+	border-radius: 10px;
+}
+
+.userbtn {
+	margin-top: 16px;
+}
