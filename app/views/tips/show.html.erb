@@ -4,10 +4,14 @@
 		<h2>Author: <%= @author_firstname %> <%= @author_lastname %> </h2>
 		<h2>Title: <%= @tip.name %></h2>
 		<h2>Comment: <%= @tip.description %></h2>
+		
+		<% if @current_user == @tip.user %>
 		<a href = "/tips/<%= @tip.id %>/edit"><b>EDIT POST!</b></a>
 		<br>
 		<%= button_to "delete", {:controller => :tips,
       :action => 'destroy', :id => @tip.id }, :method => :delete,  data: {confirm: "Are you sure?"} %>
+		<% end %>
+
 	</div>
 </body>
 
