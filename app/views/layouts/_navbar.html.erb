@@ -9,7 +9,7 @@
 		
 			<% if @current_user %>
 				<%= link_to "Profile", user_path(@current_user), class: "nav btn btn-default navbar-btn userbtn" %>
-				<%= link_to "Log Out", '/log_out', class: "nav btn btn-default navbar-btn userbtn" %>
+				<%= link_to "Log Out", sessions_path, method: :delete, class: "nav btn btn-default navbar-btn userbtn" %>
 			<% else %>
 				<%= link_to "Sign Up", "users/new", class: "nav btn btn-default navbar-btn userbtn" %>
 				<%= link_to "Sign In", '/sign_in', class: "nav btn btn-default navbar-btn userbtn" %>
