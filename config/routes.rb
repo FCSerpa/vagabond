@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'tips/new'
   get 'tips/show'
   get '/tips/:id', to: 'tips#show'
+  get 'tips/:id/edit', to: 'tips#edit', as: 'tip'
+  patch '/tips/:id', to: 'tips#update'
 
   get "/sign_in", to: "sessions#new"
   post "/sessions/new", to: "sessions#create"

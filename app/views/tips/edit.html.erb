@@ -1,0 +1,10 @@
+<h3>Edit your post here </h3>
+<%= form_for @tip, :url => { :action => "update", method: "patch" } do |f| %>
+  <span>
+    <%= f.text_field :name, placeholder: "Title of the post" %> 
+  </span><br><br>
+  <span>
+    <%= f.text_area :description, placeholder: "Enter comments", :cols => "50", :rows => "10" %>
+  </span><br><br>
+  <%= f.submit "Update" %>
+<% end %>
