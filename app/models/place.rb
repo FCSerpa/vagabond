@@ -1,4 +1,4 @@
 class Place < ActiveRecord::Base
-	belongs_to :user
-	belongs_to :tip
+	has_many :users
+	has_many :tip
 end
