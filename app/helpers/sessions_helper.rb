@@ -5,6 +5,7 @@ module SessionsHelper
   	end
 
   	def current_user
+  		# binding.pry
 	    @current_user ||= session[:user_id] && User.find(session[:user_id])
 	    # binding.pry
   	end
