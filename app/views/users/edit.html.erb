@@ -1,13 +1,15 @@
 <body id="users">
-<%= form_for @user do |f| %>
-  <span>
-    <%= f.text_field :first_name, placeholder: "First Name" %> 
-  </span>
-  <span>
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
-  </span>
-  <span>
-    <%= f.collection_select :place_id, @places,:id,:name, prompt: true %>
-  </span>
-<% end %>
+	<div class="container">
+		<%= form_for @user do |f| %>
+		  <span>
+		    <%= f.text_field :first_name, placeholder: "First Name" %> 
+		  </span>
+		  <span>
+		    <%= f.text_field :last_name, placeholder: "Last Name" %>
+		  </span>
+		  <span>
+		    <%= f.collection_select :place_id, @places,:id,:name, prompt: true %>
+		  </span>
+		<% end %>
+	</div>
 </body>
