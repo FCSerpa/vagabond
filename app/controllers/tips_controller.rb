@@ -17,7 +17,6 @@ class TipsController < ApplicationController
 	    	end
   	end
 
-
 	def show
 	    @tip = Tip.find(params[:id])
 	    @author_firstname = @tip.user.first_name
@@ -40,13 +39,6 @@ class TipsController < ApplicationController
 		redirect_to "/tips/#{tip_id}"
 
 	end
-
-
-  	def show
-    	@tip = Tip.find(params[:id])
-    	@author_firstname = @tip.user.first_name
-    	@author_lastname = @tip.user.last_name
-  	end
 
 	def destroy
 		# @tip = Tip.find(params[:id])

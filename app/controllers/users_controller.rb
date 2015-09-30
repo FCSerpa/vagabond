@@ -2,14 +2,19 @@ class UsersController < ApplicationController
 	def new
 		@user = User.new
 	end
+
 	def create
 		newPlace = Place.find_by(name: user_params[:place_id])
 		newPlaceId = newPlace.id
     	newHash = user_params
     	newHash[:place_id] = newPlaceId
-    	@user = User.create(newHash) 		
-    	login(@user)
-    	redirect_to "/users/#{@user.id}"
+    	@user = User.create(newHash) 
+    	if @user.save
+    		login(@user)
+    		redirect_to "/users/#{@user.id}"
+   	 	else 
+    		redirect_to "/users/new"
+    	end
 	end
 
 	def show
@@ -27,7 +32,6 @@ class UsersController < ApplicationController
 		@user.update(user_params)
 		redirect_to user_path
 	end
-
 
 	private
 	def user_params
