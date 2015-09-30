@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get "/sign_in", to: "sessions#new"
   post "/sessions/new", to: "sessions#create"
+  delete "/sessions", to: "sessions#destroy"
 
   get 'user/new'
   get '/users/new', to: 'users#new' 
@@ -17,5 +18,7 @@ Rails.application.routes.draw do
   get '/tips/new', to: 'tips#new'
   post '/tips', to: 'tips#create'
   get '/tips/:id', to: 'tips#show', as: 'tip'
+  get 'tips/:id/edit', to: 'tips#edit'
+  patch '/tips/:id', to: 'tips#update'
 
 end

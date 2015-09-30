@@ -9,9 +9,14 @@ class SessionsController < ApplicationController
 	    @user = User.confirm(user_params)
 	    if @user
 	      login(@user)
-	      redirect_to "/users/#{@user.id}"
+	      redirect_to user_path(@user)
 	    else
 	      redirect_to "/sign_in"
 	    end
   	end
+
+  	def destroy
+    	session[:user_id] = nil
+    	redirect_to root_path
+ 	end
 end
