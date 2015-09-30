@@ -1,11 +1,14 @@
 <body id="tips">
-<h1>New tip</h1>
-<%= form_for(@tip) do |f| %>
-  <span>
-    <%= f.text_field :name, placeholder: "Tip Name" %> 
-  </span>
-  <span>
-    <%= f.text_field :description, placeholder: "Description" %>
-  </span>
-<% end %>
+	<div class="container">
+		<h1>New tip</h1>
+		<%= form_for(@tip) do |f| %>
+		  <span>
+		    <%= f.text_field :name, placeholder: "Tip Name" %> 
+		  </span>
+		  <span>
+		    <%= f.text_field :description, placeholder: "Description" %>
+		  </span>
+		  <%= f.submit "Share a post!", class: "btn-submit" %>
+		<% end %>
+	</div>
 </body>
