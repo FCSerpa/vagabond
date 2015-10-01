@@ -7,11 +7,10 @@ var gib_lng = -5.353;
 
 $(document).ready(function(){
 	ourMap = createMap();
-	createMarker(sf_lat, sf_lng, ourMap, "San Francisco");
-	createMarker(london_lat, london_lng, ourMap, "London");
-	createMarker(gib_lat, gib_lng, ourMap, "Gibralter");
+	sfMarker = createMarker(sf_lat, sf_lng, ourMap, "San Francisco");
+	londonMarker = createMarker(london_lat, london_lng, ourMap, "London");
+	gibMarker = createMarker(gib_lat, gib_lng, ourMap, "Gibralter");
 
-	
 });
 
 function createMap()
@@ -27,9 +26,15 @@ function createMap()
 
 function createMarker(lat, lng, map, title)
 {
-	new google.maps.Marker({
+	marker = new google.maps.Marker({
 		position: new google.maps.LatLng(lat,lng),
 		map: map,
 		title: title
 	});
+
+	// marker.addEventListener('click', function(){
+	// 	alert("You clicked on " + title + " !");
+	// });
+
+	return marker;
 }
