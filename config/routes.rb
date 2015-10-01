@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get 'tips/:id/edit', to: 'tips#edit'
   patch '/tips/:id', to: 'tips#update'
 
-  get '/places', to: 'places#index'
+  get '/places', to: 'places#index', as: 'place'
   get '/places/:id', to: 'places#show'
 
 end
