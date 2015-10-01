@@ -7,9 +7,9 @@
 		
 		<% if @current_user == @tip.user %>
 		<a href = "/tips/<%= @tip.id %>/edit"><button>Edit</button></a>
-		<br><span style="float:left">
+		<br>
 		<%= button_to "Delete", {:controller => :tips,
-      :action => 'destroy', :id => @tip.id }, :method => :delete,  data: {confirm: "Are you sure?"} %></span>
+      :action => 'destroy', :id => @tip.id }, :method => :delete,  data: {confirm: "Are you sure?"} %>
 		<% end %>
 	</div>
 </body>

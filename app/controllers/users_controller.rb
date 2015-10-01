@@ -1,17 +1,19 @@
 class UsersController < ApplicationController
-	before_action :require_login, except: [:show, :new]
+	before_action :require_login, except: [:show, :new, :create]
 
 	def new
 		@user = User.new
 	end
 
 	def create
+		# binding.pry
 		newPlace = Place.find_by(name: user_params[:place_id])
 		newPlaceId = newPlace.id
     	newHash = user_params
     	newHash[:place_id] = newPlaceId
     	@user = User.create(newHash) 
     	if @user.save
+    		# binding.pry
     		login(@user)
     		redirect_to "/users/#{@user.id}"
    	 	else 
