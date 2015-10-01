@@ -11,9 +11,9 @@ London = Place.create(name: "London", latitude: 51.5072, longitude: 0.1275, pict
 Gibraltar = Place.create(name: "Gibraltar", latitude: 36.1430, longitude: 5.3530, picture: "URL")
 
 95.times do ||
-  User.create(first_name: FFaker::Name::first_name, last_name: FFaker::Name::last_name, email: FFaker::Internet::email, password: "password", place_id: sf.id)
+  User.create(first_name: FFaker::Name::first_name, last_name: FFaker::Name::last_name, email: FFaker::Internet::email, password: "password", place_id: rand(1..7))
 end
 
 1000.times do ||
-  Tip.create(name: Faker::Lorem.sentence, description: FFaker::HipsterIpsum::paragraph, user_id: rand(1..95), place_id: rand(1..3))
+  Tip.create(name: Faker::Lorem.sentence, description: FFaker::HipsterIpsum::paragraph, user_id: rand(1..95), place_id: rand(1..7))
 end

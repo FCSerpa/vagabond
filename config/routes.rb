@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   post '/sessions/new', to: 'sessions#create'
   delete '/sessions', to: 'sessions#destroy'
 
-  
   get '/users/new', to: 'users#new' 
   post '/users', to: 'users#create'
   get 'users/:id', to: 'users#show', as: 'user'
