@@ -4,7 +4,7 @@ User.delete_all
 Tip.delete_all
 Place.delete_all
 
-sf = Place.create(name: "San Francisco", latitude: 1.23, longitude: 3.14, picture: "URL")
+sf = Place.create(name: "San Francisco", latitude: 37.7833, longitude: 122.4167, picture: "URL")
 
 London = Place.create(name: "London", latitude: 51.5072, longitude: 0.1275, picture: "URL")
 
