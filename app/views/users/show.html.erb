@@ -1,22 +1,21 @@
 <body id="users">
 	<div class="container">
-		<div class="column">
-			<img src="http://www.mallorcacyclingtours.com/wp-content/uploads/2014/04/blank-profile-hi.png">
-			<ul class="list">
+		<div class="img-with-text margin">
+			<img src="http://www.mallorcacyclingtours.com/wp-content/uploads/2014/04/blank-profile-hi.png"><br>
+			<ul class="list myList" id="first">
 				<li class="info">Name: <%= @user.first_name %> <%= @user.last_name %></li>
 				<li class="info">Date Joined: <%= @user.created_at %></li>
 				<li class="info">Current City: <%= @user.place.name %></li>
 		 	</ul>
-		 	<a href = "/users/<%= @user.id %>/edit"><b>EDIT USER!</b></a>
+		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "/users/<%= @user.id %>/edit"><button>Edit</button></a>
 		</div>
-		<div>
+
+		<div class="column">
 			<% @tip.each do |f| %>
-				<ul>
+				<ul class="myList">
 					<li><a href="/tips/<%= f.id %>">Name: <%= f.name %></a></li>
 				</ul>
 			<% end %>
 		</div>
 	</div>
-</body>
-
- 
+</body> 
