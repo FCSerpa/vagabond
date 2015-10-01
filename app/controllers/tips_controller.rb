@@ -1,4 +1,6 @@
 class TipsController < ApplicationController
+  	before_action :require_login, except: [:index, :show]
+
   	def index
     	@tips = Tip.all
   	end
@@ -53,5 +55,10 @@ class TipsController < ApplicationController
     	params.require(:tip).permit(:name, :description, :user_id)
   	end
 
+  	def require_login
+		if !current_user
+			redirect_to sign_in_path
+		end
+	end
 end
 

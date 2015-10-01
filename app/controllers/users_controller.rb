@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :require_login :except show
+	before_action :require_login, except: [:show]
 
 	def new
 		@user = User.new
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
 	def require_login
 		if !current_user
-			redirect_to sessions_new_path
+			redirect_to sign_in_path
 		end
 	end
 end
