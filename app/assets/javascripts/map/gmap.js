@@ -12,7 +12,7 @@ $(document).ready(function(){
 	createMarker(sf_lat, sf_lng, map, "San Francisco");
 	createMarker(london_lat, london_lng, map, "London");
 	createMarker(gib_lat, gib_lng, map, "Gibralter");
-	createInfoWindow(text);
+	
 
 });
 
