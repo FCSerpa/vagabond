@@ -9,10 +9,11 @@ Rails.application.routes.draw do
   delete '/tips/:id', to: 'tips#destroy'
 
   get '/sign_in', to: 'sessions#new'
+  get '/logout', to: "sessions#destroy"
   post '/sessions/new', to: 'sessions#create'
   delete '/sessions', to: 'sessions#destroy'
 
-  get 'user/new'
+  
   get '/users/new', to: 'users#new' 
   post '/users', to: 'users#create'
   get 'users/:id', to: 'users#show', as: 'user'

@@ -7,18 +7,20 @@ class TipsController < ApplicationController
 
   	def new
     	@tip = Tip.new
+    	@places = Place.all
   	end
 
   	def create
 	    @tip = Tip.new(tip_params)
 	    @tip.user_id = current_user.id
-	    	if @tip.save
-	      		redirect_to "/tips/#{@tip.id}"
-	    	else
-	      		render :new
-	    	end
+	 
+	    placeId = @tip.place_id
+    	if @tip.save
+      		redirect_to "/places/#{placeId}"
+    	else
+      		render :new
+    	end
   	end
-
 
 	def show
 	    @tip = Tip.find(params[:id])
@@ -52,7 +54,7 @@ class TipsController < ApplicationController
   	private
 
   	def tip_params
-    	params.require(:tip).permit(:name, :description, :user_id)
+    	params.require(:tip).permit(:name, :description, :user_id, :place_id)
   	end
 
   	def require_login
