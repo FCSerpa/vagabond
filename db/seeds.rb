@@ -19,7 +19,7 @@ nepal = Place.create(name: "Nepal", latitude: 26.5333, longitude: 86.733, pictur
 
 machupichu = Place.create(name:"Machu pichu", latitude: -13.1633, longitude: -72.54, picture: "URL")
 
-95.times do ||
+98.times do ||
   User.create(first_name: FFaker::Name::first_name, last_name: FFaker::Name::last_name, email: FFaker::Internet::email, password: "password", place_id: sf.id)
 end
 
