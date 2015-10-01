@@ -1,3 +1,27 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body#users{
+    background-color: #FAEBD7;
+    font-family: "Raleway";
+    font-size: 25px;
+}
+.margin {
+    margin-top: 100px;
+}
+.column {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 100px
+}
+.myList {
+    list-style-type: none;
+}
+.img-with-text {
+    text-align: justify;
+    width: 600px;
+    display:inline-block;
+    vertical-align:top;
+}
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+    width: 510px;
+}

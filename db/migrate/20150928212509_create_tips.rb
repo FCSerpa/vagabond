@@ -3,8 +3,8 @@ class CreateTips < ActiveRecord::Migration
     create_table :tips do |t|
       t.string :name
       t.string :description
-      t.integer :users_id
-      t.integer :places_id
+      t.integer :user_id
+      t.integer :place_id
 
       t.timestamps null: false
     end

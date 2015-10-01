@@ -1,18 +1,31 @@
 Rails.application.routes.draw do
-	root 'welcome#index'
-	get 'user/new'
-#   Prefix Verb   URI Pattern               Controller#Action
-#    signup GET    /signup(.:format)         users#new
-#     users GET    /users(.:format)          users#index
-#           POST   /users(.:format)          users#create
-#  new_user GET    /users/new(.:format)      users#new
-# edit_user GET    /users/:id/edit(.:format) users#edit
-#      user GET    /users/:id(.:format)      users#show
-#           PATCH  /users/:id(.:format)      users#update
-#           PUT    /users/:id(.:format)      users#update
-#           DELETE /users/:id(.:format)      users#destroy
+
+  root 'welcome#index'
+
+  get '/tips/', to: 'tips#index'
+  get 'tips/new'
+  get 'tips/show'
+  get '/tips/:id', to: 'tips#show'
+  delete '/tips/:id', to: 'tips#destroy'
+
+  get '/sign_in', to: 'sessions#new'
+  get '/logout', to: "sessions#destroy"
+  post '/sessions/new', to: 'sessions#create'
+  delete '/sessions', to: 'sessions#destroy'
+
   get '/users/new', to: 'users#new' 
   post '/users', to: 'users#create'
-  get 'users/:id' to: 'users#show'
+  get 'users/:id', to: 'users#show', as: 'user'
+  get 'users/:id/edit', to: 'users#edit'
+  patch 'users/:id', to: 'users#update'
+
+  get '/tips/new', to: 'tips#new'
+  post '/tips', to: 'tips#create'
+  get '/tips/:id', to: 'tips#show', as: 'tip'
+  get 'tips/:id/edit', to: 'tips#edit'
+  patch '/tips/:id', to: 'tips#update'
+
+  get '/places', to: 'places#index', as: 'place'
+  get '/places/:id', to: 'places#show'
 
 end

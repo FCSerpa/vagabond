@@ -1,0 +1,16 @@
+<body id="tips">
+	<div class="container">
+		<h1> <%= @author_firstname %>'s Post </h1>
+		<h2>Author: <%= @author_firstname %> <%= @author_lastname %> </h2>
+		<h2>Title: <%= @tip.name %></h2>
+		<h2>Comment: <%= @tip.description %></h2>&nbsp;
+		
+		<% if @current_user == @tip.user %>
+		<a href = "/tips/<%= @tip.id %>/edit"><button>Edit</button></a>
+		<br>
+		<%= button_to "Delete", {:controller => :tips,
+      :action => 'destroy', :id => @tip.id }, :method => :delete,  data: {confirm: "Are you sure?"} %>
+		<% end %>
+	</div>
+</body>
+

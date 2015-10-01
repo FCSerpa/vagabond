@@ -1,0 +1,17 @@
+<body id="tips">
+	<div class="container">
+		<h1>New tip</h1>
+		<%= form_for(@tip) do |f| %>
+		  	<span>
+		    	<%= f.text_field :name, placeholder: "Tip Name" %> 
+		  	</span>
+		  	<span>
+		    	<%= f.text_field :description, placeholder: "Description" %>
+		  	</span>
+		  	<span>
+		  	 	<%= f.collection_select :place_id, @places,:id,:name, prompt: true %>
+		  	</span>
+		  		<%= f.submit "Share a post!", class: "btn-submit" %>
+		<% end %>
+	</div>
+</body>

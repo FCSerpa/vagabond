@@ -1,0 +1,16 @@
+<body id="users">
+	<div class="container margin">
+		<%= form_for @user do |f| %>
+		  <span>
+		    <%= f.text_field :first_name, placeholder: "First Name" %> 
+		  </span>
+		  <span>
+		    <%= f.text_field :last_name, placeholder: "Last Name" %>
+		  </span>
+		  <span>
+		    <%= f.collection_select :place_id, @places,:id,:name%>
+		  </span>
+		  <%= f.submit %>
+		<% end %>
+	</div>
+</body>

@@ -1,0 +1,15 @@
+<body id="places">
+	<div class="container">
+		<h1><%= @place.name %></h1>
+		<span>
+			Latitude: <%= @place.latitude %>
+			Longitude: <%= @place.longitude %>
+		</span>
+		<button  type="button" class="btn btn-default btn-lg"><a href="/tips/new">Share a tip!</a></button>
+		<% @tip.each do |f| %>
+			<ul class="myList">
+				<li><a href="/tips/<%=f.id%>">Tip: <%= f.name %></a></li>
+			</ul>
+		<% end %>
+	</div>
+</body>
