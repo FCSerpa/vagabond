@@ -8,9 +8,8 @@
 				<li class="info" data-no-turbolink="true">Current City:<%= link_to @user.place.name, place_path %> </li> 
 		 	</ul>
 		 	<% if @current_user == @user %>
-			 	<a href = "/users/<%= @user.id %>/edit"><b>EDIT USER!</b></a>
-		 	<% end %>
 		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "/users/<%= @user.id %>/edit"><button>Edit</button></a>
+		 	<% end %>
 		</div>
 		<div class="column">
 			<% @tip.each do |f| %>
