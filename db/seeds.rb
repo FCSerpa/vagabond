@@ -15,5 +15,5 @@ Gibraltar = Place.create(name: "Gibraltar", latitude: 36.1430, longitude: 5.3530
 end
 
 1000.times do ||
-  Tip.create(Title: Ffaker::Lorem::sentence, description: FFaker::HipsterIpsum::paragraph, user_id: rand(1..95), place_id: sf.id)
+  Tip.create(name: Faker::Lorem.sentence, description: FFaker::HipsterIpsum::paragraph, user_id: rand(1..95), place_id: rand(1..3))
 end

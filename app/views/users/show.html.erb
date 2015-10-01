@@ -9,11 +9,10 @@
 		 	</ul>
 		 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = "/users/<%= @user.id %>/edit"><button>Edit</button></a>
 		</div>
-
 		<div class="column">
 			<% @tip.each do |f| %>
 				<ul class="myList">
-					<li><a href="/tips/<%= f.id %>">Name: <%= f.name %></a></li>
+					<li><a href="/tips/<%= f.id %>">Tips: <%= f.name %></a></li>
 				</ul>
 			<% end %>
 		</div>
