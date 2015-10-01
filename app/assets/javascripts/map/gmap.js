@@ -4,12 +4,15 @@ var london_lat = 51.507;
 var london_lng = -0.1275;
 var gib_lat = 36.143;
 var gib_lng = -5.353;
+var map;
+var marker;
 
 $(document).ready(function(){
-	ourMap = createMap();
-	sfMarker = createMarker(sf_lat, sf_lng, ourMap, "San Francisco");
-	londonMarker = createMarker(london_lat, london_lng, ourMap, "London");
-	gibMarker = createMarker(gib_lat, gib_lng, ourMap, "Gibralter");
+	createMap();
+	createMarker(sf_lat, sf_lng, map, "San Francisco");
+	createMarker(london_lat, london_lng, map, "London");
+	createMarker(gib_lat, gib_lng, map, "Gibralter");
+	createInfoWindow(text);
 
 });
 
@@ -32,9 +35,8 @@ function createMarker(lat, lng, map, title)
 		title: title
 	});
 
-	// marker.addEventListener('click', function(){
-	// 	alert("You clicked on " + title + " !");
-	// });
+
+
 
 	return marker;
 }
